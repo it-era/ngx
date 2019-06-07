@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 <!-- This section contains upcoming changes not yet in a version -->
 
-## [0.0.1] - 2019-06-20 / Original release
+## [0.0.1] - 2019-06-07 / Original release
 
 ### Added
 - Add [ngx-safe-pipes](https://github.com/it-era/ngx-safe-pipes) submodule
