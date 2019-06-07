@@ -118,6 +118,42 @@
           }
         }
       }
-    }},
+    },
+    "ngx-safe-pipes": {
+      "root": "projects/ngx-safe-pipes",
+      "sourceRoot": "projects/ngx-safe-pipes/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-safe-pipes/tsconfig.lib.json",
+            "project": "projects/ngx-safe-pipes/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-safe-pipes/src/test.ts",
+            "tsConfig": "projects/ngx-safe-pipes/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-safe-pipes/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-safe-pipes/tsconfig.lib.json",
+              "projects/ngx-safe-pipes/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "ngx"
 }

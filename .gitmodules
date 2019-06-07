@@ -1,0 +1,3 @@
+[submodule "projects/ngx-safe-pipes"]
+	path = projects/ngx-safe-pipes
+	url = git@github.com:it-era/ngx-safe-pipes.git
