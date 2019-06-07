@@ -1,3 +1,6 @@
 [submodule "projects/ngx-safe-pipes"]
 	path = projects/ngx-safe-pipes
 	url = git@github.com:it-era/ngx-safe-pipes.git
+[submodule "projects/ngx-lazy-load"]
+	path = projects/ngx-lazy-load
+	url = git@github.com:it-era/ngx-lazy-load.git
