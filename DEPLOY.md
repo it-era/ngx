@@ -19,7 +19,7 @@ In projects/PACKAGE_NAME :
 ```bash
 git commit -am "COMMIT_MESSAGE"
 git tag PACKAGE_VERSION
-git push
+git push --tags
 ```
 
 ## Build with ng
