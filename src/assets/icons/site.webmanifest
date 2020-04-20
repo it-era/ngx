@@ -1,0 +1,21 @@
+{
+    "name": "IT-era",
+    "short_name": "IT-era",
+    "icons": [
+        {
+            "src": "/assets/icons/android-chrome-192x192.png?v=Nmb07ry2Ln",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/android-chrome-512x512.png?v=Nmb07ry2Ln",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ddd",
+    "background_color": "#222",
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone"
+}

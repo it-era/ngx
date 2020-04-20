@@ -1,0 +1,38 @@
+$border: 2px
+$padding: 20px
+$menuWidth: 200px
+$menuItemHeight: 40px
+
+:\host
+  display: grid
+  height: 100%
+  width: 100%
+  grid-template-areas: "menu border main"
+  grid-template-columns: $menuWidth - $border  $border calc(100% - 200px)
+  grid-template-rows: 100%
+
+  .menu
+    grid-area: menu
+    height: 100%
+    width: 100%
+    overflow-x: hidden
+    overflow-y: auto
+    // border-right: $border solid #272822
+
+  .border
+    grid-area: border
+    display: flex
+
+    .separator
+      height: 90%
+      width: 2px
+      margin: auto
+      background: #272822
+
+  .main
+    grid-area: main
+    height: 100%
+    width: calc(100% - 2 * #{$padding})
+    overflow-x: hidden
+    overflow-y: auto
+    padding: 0 $padding

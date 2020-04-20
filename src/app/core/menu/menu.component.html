@@ -1,0 +1,38 @@
+<div id="menu-main">
+  <div id="menu-head" routerLink="/">
+    <h1 title="{{ 'IT-era' }}">
+      <img
+        width="100%"
+        alt="IT-era Logo"
+        src="https://it-era.dev/assets/logo-noborder.png"
+      />
+    </h1>
+  </div>
+
+  <div id="menu-body">
+    <a
+      class="subcategory"
+      href="/ngx-safe-pipes"
+      [routerLink]="'/ngx-safe-pipes'"
+      [routerLinkActive]="'active'"
+      >ngx-safe-pipes</a
+    >
+    <a
+      class="subcategory"
+      href="/ngx-lazy-load"
+      [routerLink]="'/ngx-lazy-load'"
+      [routerLinkActive]="'active'"
+      >ngx-lazy-load</a
+    >
+  </div>
+
+  <div id="menu-footer">
+    <div>2018 - {{ now.getFullYear() }}</div>
+    <div>
+      Made by
+      <a href="https://it-era.dev" rel="noreferrer noopener" target="_blank"
+        >IT-era</a
+      >
+    </div>
+  </div>
+</div>

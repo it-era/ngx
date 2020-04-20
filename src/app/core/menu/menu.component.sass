@@ -1,0 +1,99 @@
+
+$border-px: 2px
+$head-height: 84px
+$footer-base-height: 50px
+$footer-height: calc(#{$footer-base-height} + .8rem + (#{$footer-base-height} - #{$border-px} - 0.8rem) / 2)
+$color-secondary: #27282299
+$color-primary: #272822
+$white: #ffffff
+$menuItemHeight: 40px
+$menuItemPadding: 10px
+
+\:host
+  height: 100%
+  witdh: 100%
+
+  #menu-main
+    text-transform: uppercase
+    min-height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+
+    #menu-head
+      grid-area: head
+      cursor: pointer
+
+      h1
+        height: 100%
+        width: 100%
+        margin: 0
+        display: flex
+
+        img
+          width: calc(100% - 2 * 15%)
+          margin: 15%
+
+    #menu-body
+      grid-area: body
+      margin: auto
+      padding-bottom: calc(#{$menuItemHeight} + 2 * #{$menuItemPadding})
+      width: 100%
+
+    #menu-footer
+      grid-area: footer
+      width: 100%
+      display: flex
+      flex-direction: column
+      padding: calc((#{$footer-base-height} - 2 * #{$border-px} - 0.8rem) / 2) 0
+      border-top: $border-px solid transparent
+      letter-spacing: 2px
+      text-align: center
+      font-size: 0.8rem
+
+      > div
+        margin: auto
+        &:first-child
+          padding-bottom: 0.8rem
+
+.category
+  margin-top: $menuItemPadding
+  font-size: 1.2rem
+  letter-spacing: 3px
+
+  border-top: none
+
+.subcategory
+  letter-spacing: 1px
+
+.category,
+.subcategory
+  padding: $menuItemPadding
+  overflow: hidden
+  cursor: pointer
+  color: black
+  // text-align: right
+  max-width: 100%
+  display: block
+  height: $menuItemHeight
+  line-height: $menuItemHeight
+  font-size: 18px
+  text-transform: uppercase
+  text-align: center
+  text-decoration: none
+
+  &:focus
+    outline: none
+
+  &:hover
+    background: $color-secondary
+    color: $white
+
+  &:active,
+  &.active
+    background: $color-primary
+    color: $white
+
+  &.disabled
+    pointer-events: none
+    color: #424242

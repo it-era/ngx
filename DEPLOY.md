@@ -1,4 +1,3 @@
-
 # Build & Deployment
 
 ## Update package version
@@ -8,7 +7,7 @@ In projects/PACKAGE_NAME/package.json, update PACKAGE_VERSION string.
 ```json
 {
   "name": "@it-era/PACKAGE_NAME",
-  "version": "PACKAGE_VERSION",
+  "version": "PACKAGE_VERSION"
   // ...
 }
 ```
@@ -17,7 +16,7 @@ In projects/PACKAGE_NAME/package.json, update PACKAGE_VERSION string.
 
 In projects/PACKAGE_NAME, update CHANGELOG.md to reflect last changes, then :
 
-```bash
+```sh
 git commit -am "COMMIT_MESSAGE"
 git tag PACKAGE_VERSION
 git push --tags
@@ -27,14 +26,20 @@ git push --tags
 
 In root directory :
 
-```bash
+```sh
 ng build PACKAGE_NAME
+```
+
+or if ng is unavailable :
+
+```sh
+npx @angular/cli build ngx-safe-pipes
 ```
 
 ## Deploy to npm
 
 In dist/PACKAGE_NAME :
 
-```bash
+```sh
 npm publish --access=public
 ```
