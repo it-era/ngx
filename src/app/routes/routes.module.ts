@@ -1,13 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
+import { NgxComponent } from "./ngx/ngx.component";
 import { NgxLazyLoadComponent } from "./ngx-lazy-load/ngx-lazy-load.component";
 import { NgxSafePipesComponent } from "./ngx-safe-pipes/ngx-safe-pipes.component";
 import { NgxSafePipesModule } from "projects/ngx-safe-pipes/src/public-api";
 import { MarkdownModule } from "ngx-markdown";
+import { CoreModule } from "../core/core.module";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", redirectTo: "ngx", pathMatch: "full" },
+  { path: "ngx", component: NgxComponent },
   { path: "ngx-lazy-load", component: NgxLazyLoadComponent },
   { path: "ngx-safe-pipes", component: NgxSafePipesComponent },
 ];
@@ -17,8 +19,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MarkdownModule.forChild(),
     NgxSafePipesModule,
+    CoreModule,
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, NgxSafePipesComponent, NgxLazyLoadComponent],
+  declarations: [NgxComponent, NgxSafePipesComponent, NgxLazyLoadComponent],
 })
 export class RoutesModule {}
