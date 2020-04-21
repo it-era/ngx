@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  front:
+    build: ./
+    image: ${REGISTRY}/it-era/ngx-front:${BITBUCKET_BRANCH}
+    tty: true
+    environment:
+      NG_CLI_ANALYTICS: 0

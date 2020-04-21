@@ -1,0 +1,6 @@
+version: "3.4"
+
+services:
+  front:
+    ports:
+      - ${FRONT_PUBLIC_PORT:-20000}:4000

@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  front:
+    restart: always
+    networks:
+      - web
+    labels:
+      # - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.basic.frontend.rule=Host:ngx.it-era.dev"
+      - "traefik.enable=true"
+      - "traefik.port=4000"
+
+networks:
+  web:
+    external: true

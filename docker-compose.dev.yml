@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+  front:
+    restart: "no"
+    build:
+      context: ./
+      dockerfile: Dockerfile-dev
+    environment:
+      PUBLIC_HOST: "localhost:${FRONT_PUBLIC_PORT:-20000}"
+    volumes:
+      - ./:/app:consistent
+      - front__dist/:/app/dist:consistent
+      - front__node_modules/:/app/node_modules:cached
+    ports:
+      - ${FRONT_PUBLIC_PORT:-20000}:4200
+
+volumes:
+  front__node_modules:
+  front__dist:

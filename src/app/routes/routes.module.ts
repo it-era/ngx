@@ -16,7 +16,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+}),
     MarkdownModule.forChild(),
     NgxSafePipesModule,
     CoreModule,
