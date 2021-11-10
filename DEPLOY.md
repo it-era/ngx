@@ -33,7 +33,7 @@ ng build PACKAGE_NAME
 or if ng is unavailable :
 
 ```sh
-npx @angular/cli build ngx-safe-pipes
+npx @angular/cli build ngx-safe-pipes --configuration production
 ```
 
 ## Deploy to npm
