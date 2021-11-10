@@ -15,6 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- ### Removed -->
 
+## [0.2.0]
+
+### Changed
+
+- Update stack to Angular 13
+- Better display
+
 ## [0.1.0] - 2020-04-21
 
 ### Added
