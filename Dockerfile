@@ -1,4 +1,4 @@
-ARG NODE_VERSION=12
+ARG NODE_VERSION=16
 
 ## STEP 1 Install dependencies and build project into static files
 FROM node:${NODE_VERSION}-alpine as builder

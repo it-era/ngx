@@ -19,7 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update stack to Angular 13
+- Update docker node image to version 16
+- Update Angular to version 13
 - Better display
 
 ## [0.1.0] - 2020-04-21
